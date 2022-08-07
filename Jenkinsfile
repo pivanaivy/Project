@@ -1,8 +1,7 @@
 pipeline { agent {label 'docker'} stages { stage("Initial config") 
         {
             steps { script { 
-                    properties([pipelineTriggers([pollSCM('* * * * 
-                    *')])])
+                    properties([pipelineTriggers([pollSCM('* * * * *')])])
                 }
            }
         }
