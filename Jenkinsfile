@@ -22,6 +22,7 @@ pipeline {
                 ls -la
                 cd classsed-docker-tutorial
                 docker-compose up --build -d
+                docker exec classsed-docker-tutorial_server_1 npm run migrate
                 '''
                 }
             }
