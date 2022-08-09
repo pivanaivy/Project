@@ -10,7 +10,7 @@ pipeline {
         }
                 stage('Checkout') {
             steps{
-                git branch: 'master',
+                git branch: 'Test',
                     url: 'https://github.com/pivanaivy/Project.git'        
                 }
         }
