@@ -11,5 +11,7 @@ services:
       POSTGRES_USER: "docker"
     volumes:
       - /home/data:/var/lib/postgresql/data
+    volumes:
+      - /tmp/backup:/tmp/backup
 volumes:
   data:
