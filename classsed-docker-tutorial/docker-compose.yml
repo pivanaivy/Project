@@ -1,9 +1,5 @@
 version: "3.9"
 services:
-  server:
-    build: .
-    ports:
-      - '5000:5000'
   db:
     image: postgres
     environment:
@@ -15,3 +11,9 @@ services:
       - /tmp/backup:/tmp/backup
 volumes:
   data:
+  server:
+    build: .
+    ports:
+      - '5000:5000'
+    depends_on:
+      - db
