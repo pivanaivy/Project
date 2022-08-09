@@ -10,7 +10,7 @@ app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.get('/', (req, res) => res.send('Hello World!2'))
+app.get('/', (req, res) => res.send('Hello World Frome GIT!!!'))
 
 app.get('/users', async (req, res) => {
   const users = await db.select().from('users')
