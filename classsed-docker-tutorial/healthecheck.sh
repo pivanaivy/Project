@@ -6,7 +6,7 @@
 set -x
 
 CURL_MAX_TIME=15
-ATTEMPTS=25
+ATTEMPTS=5
 
 for ATTEMPT in $(seq ${ATTEMPTS}); do
     echo "Attempt ${ATTEMPT} of ${ATTEMPTS}"
