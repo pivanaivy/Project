@@ -6,7 +6,7 @@
 set -x
 
 CURL_MAX_TIME=15
-ATTEMPTS=5
+ATTEMPTS=1
 SLEEP_TIME=5
 
 for ATTEMPT in $(seq ${ATTEMPTS}); do
