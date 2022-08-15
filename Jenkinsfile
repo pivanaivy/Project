@@ -38,7 +38,6 @@ pipeline {
                    *Status :* ${currentBuild.result}'
                    """
             }
-            cleanWs()
         }
     }
     
