@@ -13,7 +13,7 @@ for ATTEMPT in $(seq ${ATTEMPTS}); do
     echo "Attempt ${ATTEMPT} of ${ATTEMPTS}"
     echo "Curling against the Jenkins server"
     echo "Should expect a 200 within ${CURL_MAX_TIME} seconds"
-    STATUS_CODE=$(curl -sL -w "%{http_code}" localhost:8080 -o /dev/null \
+    STATUS_CODE=$(curl -sL -w "%{http_code}" localhost:5000 -o /dev/null \
         --max-time ${CURL_MAX_TIME})
 
     if [[ "$STATUS_CODE" == "200" ]]; then
