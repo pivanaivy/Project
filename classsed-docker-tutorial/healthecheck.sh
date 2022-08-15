@@ -20,7 +20,7 @@ for ATTEMPT in $(seq ${ATTEMPTS}); do
         echo "JAVA has come up and ready to use after ${ATTEMPT} of ${ATTEMPTS} attempts"
         exit 0
     else
-	git reset --hard
+	git revert HEAD
         echo "JAVA did not return a correct status code yet"
         echo "Returned: $STATUS_CODE"
         sleep ${SLEEP_TIME}
