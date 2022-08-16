@@ -1,0 +1,17 @@
+pipeline {
+  agent any
+  triggers {
+        cron('H/1 * * * *')
+    }
+  stages {
+    stage("start backup") {
+      steps {
+        sh '''#!/bin/bash
+        pwd
+        ls -la
+        docker exec -t classsed-docker-tutorial_db_1 pg_dumpall -c -U docker > /var/backup/dump_`date +%d-%m-%Y"_"%H_%M_%S`.sql
+        '''
+      }
+    }
+  }
+}
