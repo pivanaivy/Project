@@ -8,6 +8,7 @@ pipeline {
       steps {
         sh '''#!/bin/bash
         pwd
+        chmod 777 /var/backup/
         ls -la
         docker exec -t classsed-docker-tutorial_db_1 pg_dumpall -c -U docker > /var/backup/dump_`date +%d-%m-%Y"_"%H_%M_%S`.sql
         '''
