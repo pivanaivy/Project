@@ -1,0 +1,19 @@
+pipeline {
+  agent any
+  triggers {
+        cron('H/1 * * * *')
+    }
+  stages {
+    stage("start healthecheck.sh") {
+      steps {
+        sh '''#!/bin/bash
+        pwd
+        cd ~/genkins/workspace/project1/classsed-docker-tutorial
+        ls -la
+        chmod +x healthecheck.sh
+        ./healthecheck.sh
+        '''
+      }
+    }
+  }
+}
