@@ -3,7 +3,7 @@ services:
   server:
     build: .
     ports:
-      - '5000:5000'
+      - '4000:4000'
   db:
     image: postgres
     environment:
@@ -11,5 +11,7 @@ services:
       POSTGRES_USER: "docker"
     volumes:
       - /home/data:/var/lib/postgresql/data
+    volumes:
+      - /var/backup:/var/backup
 volumes:
   data:
